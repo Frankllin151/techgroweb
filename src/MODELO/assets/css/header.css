@@ -1,0 +1,131 @@
+@import url(/assets/css/base.css);
+
+.header-main{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile{
+  display: none;
+}
+.navagation-mobile{
+  display: none;
+}
+.navagation nav .list-nav{
+  display: flex;
+
+}
+
+.navagation ul li{
+  word-spacing: 3px;
+  padding: 0px 10px;
+  position: relative;
+}
+
+/* Dropdown */
+.dropdown-content{
+  display: none;
+  position: absolute;
+  top: auto;
+  left: 0%;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0px;
+  min-width: 340px;
+}
+
+.dropdown-content li {
+  word-spacing: 0px !important;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+.dropdown-content li a {
+  
+  color: var(--blue-darklight);
+}
+
+/* Mostrar o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  transition: 3s ease;
+  display: block;
+}
+
+.button-contato button{
+
+ padding: 10px 20px;
+ border-radius: 4px;
+ cursor: pointer;
+  background: var(--gradient);
+}
+.button-contato button a{
+  color: #eee;
+}
+.button-contato button:hover{
+  transform: scale(1.2);
+  transition: 0.4s ease-in-out;
+}
+
+/*Tablet*/
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .navagation-mobile{
+    display: none;
+  }
+  .mobile{
+
+    display: none;
+  }
+  
+}
+
+
+/*MOBILE*/
+@media screen and (max-width:768px)  {
+  .mobile{
+    display: block;
+  }
+  .menu-mobile{
+    background: #fff;
+    font-size: 35px;
+  }
+  .navagation-mobile{
+    display: none;
+    position: absolute;
+    top: 100%; /* Logo abaixo do header */
+    left: 0;
+    width: 100%;
+   
+    background-color: var(--blue-ligthA); /* Cor de fundo do menu */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    z-index: 8;
+  }
+  .active-menu-mobile{
+    display: block;
+  }
+ .list-nav{
+  display: flex;
+  justify-content: center;
+ }
+ .list-nav li{
+  color: #eee ;
+  margin: 5px;
+ }
+ .list-nav li a{
+  color: #eee ;
+ }
+ .dropdown-content li a{
+  color: var(--darkblack);
+ }
+ .button-contato{
+  display: none;
+ }
+ .navagation{
+  display: none;
+ }
+}

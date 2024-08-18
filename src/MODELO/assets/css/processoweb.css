@@ -1,0 +1,62 @@
+@import url(/assets/css/base.css);
+
+.container-etapa{
+  margin-top: 130px;
+  display: flex;
+}
+.content-etapa{
+flex: 1;
+}
+.content-etapa .title-etapa{
+  font-size: 38px;
+  
+}
+.content-etapa ul li{
+  margin: 10px;
+}
+.content-etapa .spantitle{
+  font-weight: 700;
+}
+
+.content-etapa .spantitle i{
+  margin-right: 5px;
+  color: var(--blue-secondary);
+}
+.content-etapa .etapa-img{
+  max-width: 100%;
+  height: auto;
+}
+/*TABLET*/
+@media screen and (min-width:768px) and (max-width:1023px){
+  .container-etapa{
+    display: flex;
+    
+   margin-top: 130px;
+  }
+  .content-etapa .title-etapa {
+    font-size: 34px;
+}
+.content-etapa ul li{
+  font-size: 13px;
+}
+
+}
+
+/*MOBILE*/
+
+@media screen and (max-width:768px){
+  .container-etapa{
+    display: flex;
+    
+    flex-direction: column;
+  }
+  .content-etapa .title-etapa {
+    font-size: 34px;
+}
+.content-etapa ul li{
+  font-size: 13px;
+}
+.content-etapa .title-etapa {
+  font-size: 30px;
+}
+}

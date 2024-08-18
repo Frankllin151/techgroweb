@@ -14,7 +14,7 @@
              <li><a href="#">SEO</a></li>
            </ul>
          </li>
-         <li><a href="#blog">Blog</a></li>
+         <li><a href="blog.php">Blog</a></li>
          <li><a href="#portfolio">Portfólio</a></li>
          <li><a href="#empresa">Empresa</a></li>
        </ul>
@@ -22,7 +22,7 @@
    </div>
 
    <div class="button-contato">
-     <button><a href="">Entre em Contato <i class="bi bi-arrow-right"></i></a></i></button>
+     <button><a href="paginacontato.php">Entre em Contato <i class="bi bi-arrow-right"></i></a></i></button>
    </div>
    <!--Mobile-->
    <div class="mobile">
@@ -39,9 +39,9 @@
              <li><a href="#">SEO</a></li>
            </ul>
          </li>
-         <li><a href="">Blog</a></li>
-         <li><a href="">Portfólio</a></li>
-         <li><a href="">Empresa</a></li>
+         <li><a href="blog.php">Blog</a></li>
+         <li><a href="#portfolio">Portfólio</a></li>
+         <li><a href="#empresa">Empresa</a></li>
        </ul>
      </nav>
    </div>

@@ -1,0 +1,106 @@
+@import url(/assets/css/base.css);
+
+.container-contato{
+  margin-top: 140px;
+}
+.text-title {
+  display: flex;
+  justify-content: center;
+}
+.text-title h3{
+  font-size: 48px;
+  text-transform: uppercase;
+  color: var(--blue-light);
+}
+.layout-flex{
+  display: flex;
+  margin-top: 40px;
+}
+.content-ctn{
+  flex: 1;
+  padding: 0px 40px;
+}
+.content-ctn:nth-child(1){
+  display: flex;
+  justify-content: center;
+}
+.content-ctn:nth-child(2){
+  display: flex;
+  justify-content: center;
+}
+.title-cn h5{
+  font-size: 24px;
+  color: var(--darkblack);
+  font-weight: 600;
+}
+.card-ctn p{
+  color: var(--blue-darklight);
+}
+
+.rede-cn {
+  display: flex;
+  flex-direction: column;
+}
+.rede-cn span{
+margin-top: 8px;
+}
+.rede-cn span i{
+  color: var(--blue-light);
+}
+.link-action-wtp{
+  margin-top: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: var(--green);
+}
+.content-ctn .form-contato{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content-ctn .form-contato input , 
+.form-contato select , 
+.form-contato option , .form-contato textarea{
+  outline: none;
+  margin-top: 10px;
+  border: 1px solid var(--blue-darklight);
+  padding: 10px 20px;
+border-radius: 4px;
+
+}
+.form-contato textarea{
+  width: 100%;        /* Faz o textarea ocupar 100% da largura */
+  max-height: 200px;  /* Define a altura máxima */
+  resize: vertical;
+}
+.form-contato button{
+  margin-top: 5px;
+  padding: 10px 20px;
+  color: #eee;
+  font-size: 16px;
+  background-color: var(--blue-light);
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  
+}
+@media screen and (max-width:768px){
+  .layout-flex{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+  .content-ctn{
+    flex: 0;
+    padding: 0px 20px;
+  }
+  .text-title h3 {
+    font-size: 31px;
+    text-transform: uppercase;
+    color: var(--blue-light);
+}
+.container-contato {
+  margin-top: 154px;
+}
+}

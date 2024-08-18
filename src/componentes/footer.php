@@ -28,12 +28,13 @@
   </div>
   <div class="rede-social">
     <div class="button-contato-footer">
-      <button href=""><a href="">Entre em Contato <i class="bi bi-arrow-right"></i></a> </i></button>
+      <button><a href="paginacontato.php">Entre em Contato <i class="bi bi-arrow-right"></i></a> </i></button>
 
     </div>
     <ul>
       <li><i class="bi bi-envelope"></i> contato@techgroweb.shop</li>
       <li><i class="bi bi-telephone"></i> +55 (84) 986044130</li>
+      <li><i class="bi bi-instagram"></i> instagram</li>
     </ul>
   </div>
 </footer>
