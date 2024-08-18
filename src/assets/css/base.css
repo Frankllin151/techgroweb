@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url(/node_modules/bootstrap-icons/font/bootstrap-icons.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    /* Cores principais  */
+    --blue-primary: #5297FF;
+    --blue-secondary: #0056D8;
+    --blue-light: #6DA8FF;
+    --blue-dark: #334560;
+    --blue-ligthA:#AAAAAA;
+    --blue-darklight:#5A5A5A;
+    --darkblack:#232323;
+    --green:#04bc00;
+    /* Gradiente */
+    --gradient: linear-gradient(
+      to right,
+      rgba(30, 120, 255, 1) 30%,
+      rgba(21, 89, 239, 1) 60%,
+      rgba(12, 58, 222, 1) 90%
+    );
+
+}
+
+::-webkit-scrollbar {
+  width: 1px; /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor do track (fundo da scrollbar) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient); /* Aplicando o gradiente ao thumb (indicador de rolagem) */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient); /* Cor do thumb ao passar o mouse por cima */
+}
+
+/* Firefox (Suporte limitado) */
+.scrollbar {
+  scrollbar-color: var(--gradient) #f1f1f1; /* Aplica a cor da scrollbar e do track */
+  scrollbar-width: thin; /* Define a largura da scrollbar */
+}
+
+header , section, footer{
+  padding: 0px 50px;
+}
+h1,h2,h3,h4,h5,h6,p,span,small , li , a , button{
+  font-family: "Open Sans", sans-serif;
+  color: var(--blue-darklight);
+
+}
+button{
+  border: none;
+}
+li, a, button{
+  font-weight: 400;
+}
+li{
+
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+
+}

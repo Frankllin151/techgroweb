@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechgroWeb >> Blog</title>
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+  <link rel="stylesheet" href="./assets/css/blog.css">
+
+</head>
+<body>
+  <!--Header-->
+  <header class="header-main">
+    <div><img width="100" height="100" src="/assets/icon/logo.svg" alt=""></div>
+    <div class="navagation">
+      <nav>
+        <ul class="list-nav">
+          <li class="dropdown">Serviços
+            <i class="bi bi-chevron-down"></i>
+            <ul class="dropdown-content">
+              <li><a href="#">Web Design</a></li>
+          <li><a href="#">Desenvolvimentos Sites</a></li>
+          <li><a href="#">Desenvolvimentos ERPS</a></li>
+          <li><a href="#">Desenvolvimentos Lojas</a></li>
+          <li><a href="#">SEO</a></li>
+            </ul>
+          </li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#empresa">Empresa</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="button-contato">
+      <button><a href="">Entre em Contato <i class="bi bi-arrow-right"></i></a></i></button>
+    </div>
+    <!--Mobile-->
+   <div class="mobile">
+    <button id="btn-mobile-menu" class="menu-mobile"><i class="bi bi-list"></i></button>
+   <nav class="navagation-mobile">
+    <ul class="list-nav">
+      <li class="dropdown">Serviços
+        <i class="bi bi-chevron-down"></i>
+        <ul class="dropdown-content">
+          <li><a href="#">Web Design</a></li>
+      <li><a href="#">Desenvolvimentos Sites</a></li>
+      <li><a href="#">Desenvolvimentos ERPS</a></li>
+      <li><a href="#">Desenvolvimentos Lojas</a></li>
+      <li><a href="#">SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">Portfólio</a></li>
+      <li><a href="">Empresa</a></li>
+    </ul>
+   </nav>
+  </div>
+  </header>
+   <!--Header end-->
+ <!---blog conteudo-->
+ <section class="blog-content">
+  <div class="post">
+    <h1 class="post-title">
+      Desvendando a Web: Como a Programação Pode Transformar Seu Negócio
+    </h1>
+    <p class="post-date">Publicado em 17 de Agosto de 2024</p>
+    <div class="post-image-author">
+     
+    </div>
+    <div class="post-text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+        Cras venenatis euismod malesuada. Nullam ac sapien vitae purus vestibulum vestibulum. Praesent non 
+        tristique dui. Fusce pharetra justo eu nisl dapibus, in cursus dolor bibendum.
+      </p>
+      <p>
+        Sed cursus, nisl et semper scelerisque, orci lacus vulputate libero, at volutpat orci turpis sed urna. 
+        Integer egestas, nisi a convallis facilisis, nulla sapien cursus justo, a consectetur purus ligula sit 
+        amet enim.
+      </p>
+      <p>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur sit 
+        amet nisi at dolor aliquam bibendum. Cras varius, metus nec tristique gravida, nulla magna congue nisi, 
+        vel gravida mauris justo id sapien.
+      </p>
+    </div>
+   
+  </div>
+  <div class="buton-whtsap-blog">
+    <button><a href="">Fale com um especialista <i class="bi bi-whatsapp"></i></a> </button>
+  </div>
+</section>
+
+ <!---blog conteudo end-->
+    <!--Footer-->
+    <footer class="footer-main">
+      <div class="logo">
+        <img width="100"src="/assets/icon/logo.svg" alt="">
+        <p class="tec-copy">
+          Tecnologia e Soluções <br>
+         <span> crescemos sua empresa na Web</span>
+        </p>
+       
+      </div>
+      <div class="servicos">
+        <h4>Serviços</h4>
+        <ul>
+          <li>Web Design</li>
+          <li><a href="">Desenvolvimentos Sites</a></li>
+          <li><a href="">Desenvolvimentos ERPS</a></li>
+          <li><a href="">Desenvolvimentos Lojas</a></li>
+          <li><a href="">SEO</a></li>
+        </ul>
+      </div>
+      <div class="insights">
+        <h4>Insights</h4>
+        <ul>
+          <li><a href="">Blog</a></li>
+          <li><a href="">E-books</a></li>
+          <li><a href="">Empresa</a></li>
+        </ul>
+      </div>
+      <div class="rede-social">
+        <div class="button-contato-footer">
+          <button href=""><a href="">Entre em Contato <i class="bi bi-arrow-right"></i></a> </i></button>
+          
+        </div>
+        <ul>
+          <li><i class="bi bi-envelope"></i> contato@techgroweb.shop</li>
+          <li><i class="bi bi-telephone"></i> +55 (84) 986044130</li>
+        </ul>
+      </div>
+     </footer>
+       <!--Footer End-->
+  
+</body>
+<script src="./assets/js/mobile.js"></script>
+<script>
+  // Exemplo simples de JS para mostrar/ocultar parte do texto
+document.querySelector('.post-title').addEventListener('click', function() {
+    const postText = document.querySelector('.post-text');
+    postText.style.display = postText.style.display === 'none' ? 'block' : 'none';
+});
+
+</script>
+</html>
