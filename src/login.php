@@ -82,9 +82,13 @@
 <body>
   <div class="login-container">
     <h1>Login</h1>
-    <?php if(isset($_GET["error"])): ?>
-    <?php if($_GET["error"] == 'invalid_email'): ?>
+    <?php if (isset($_GET["error"])): ?>
+    <?php if ($_GET["error"] === 'invalid_email'): ?>
     <h6 class="error-session">Email inválido</h6>
+    <?php endif; ?>
+
+    <?php if ($_GET["error"] === "senhaincorreta"): ?>
+    <h6 class="error-session">Dados incorretos</h6>
     <?php endif; ?>
     <?php endif; ?>
     <form action="action/action-login.php" method="POST">

@@ -1,6 +1,6 @@
 <?php 
 
-require "../CONFIG.PHP";
+require "../CONFIG.php";
 require "../daomysql/daoLogin.php";
 require "../model/Login-m.php";
 
@@ -19,5 +19,5 @@ if ($login->authenticate($email, $password)) {
  
  exit;
 } else {
- // echo "Email ou senha incorretos.";
+ header("location: " . URL ."/login.php?error=senhaincorreta");
 }
