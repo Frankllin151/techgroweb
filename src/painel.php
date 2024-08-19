@@ -1,3 +1,14 @@
+<?php session_start(); ?>
+<?php
+    
+
+    require "./CONFIG.PHP"; 
+    if(!isset($_SESSION['user_id'])){
+      header("Location: " . URL . "login.php");
+      exit;
+    }
+    
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +40,7 @@
     </div>
 
     <div class="main-content">
+
       <h2>Bem-vindo ao Painel</h2>
       <p>Aqui você pode gerenciar todas as funcionalidades da plataforma.</p>
       <?php

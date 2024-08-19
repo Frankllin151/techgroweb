@@ -4,8 +4,7 @@ use Dotenv\Dotenv;
 
 require __DIR__."/vendor/autoload.php";
 
-session_status();
-define("CONFIG" , "http://localhost:8080/");
+define("URL" , "http://localhost:8080/");
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();

@@ -1,5 +1,4 @@
 <?php 
-require "../CONFIG.PHP";
 
 class daoLogin{
   private $pdo;
