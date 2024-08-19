@@ -63,6 +63,10 @@
     background: var(--green);
   }
 
+  .error-session {
+    color: red;
+  }
+
   .forgot-password {
     margin-top: 15px;
     display: block;
@@ -78,7 +82,12 @@
 <body>
   <div class="login-container">
     <h1>Login</h1>
-    <form action="dashboard.html" method="POST">
+    <?php if(isset($_GET["error"])): ?>
+    <?php if($_GET["error"] == 'invalid_email'): ?>
+    <h6 class="error-session">Email inválido</h6>
+    <?php endif; ?>
+    <?php endif; ?>
+    <form action="action/action-login.php" method="POST">
       <label for="email">E-mail:</label>
       <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
