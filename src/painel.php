@@ -2,7 +2,7 @@
 <?php
     
 
-    require "./CONFIG.PHP"; 
+    require "./CONFIG.php"; 
     if(!isset($_SESSION['user_id'])){
       header("Location: " . URL . "login.php");
       exit;
