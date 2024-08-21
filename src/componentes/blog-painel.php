@@ -1,4 +1,12 @@
 <div class="blog-panel">
+  <a class="todosblog" href="painel.php?comp=todosBlog">Ver todos blog</a>
+  <?php if (isset($_GET["mensagem"])): ?>
+  <?php if ($_GET["mensagem"] === 'sucesso'): ?>
+  <h6 class="mensagemsucesso-blog">Publicação enviada com sucesso</h6>
+  <?php elseif ($_GET["mensagem"] === 'erro'): ?>
+  <h6 class="mensagemerror-blog">Publicação não enviada</h6>
+  <?php endif; ?>
+  <?php endif; ?>
   <h3>Criar Postagem no Blog</h3>
   <form action="/action/action-blog.php" method="POST">
     <label for="titulo">Título da Postagem:</label>

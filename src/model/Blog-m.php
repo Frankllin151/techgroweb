@@ -24,6 +24,10 @@ class Blog{
   return $this->datetime;
  }
  // Setters
+ public function setId(int $id): void {
+  $this->id = $id;
+}
+
 public function setTitle(string $title): void
 {
  $this->title = $title;
@@ -41,6 +45,7 @@ public function setdatetime(string $datetime): void
 interface DaoBlog{
   public function save(Blog $blog): bool;
   public function delete(int $id): bool;
-  public function findById(int $id):bool;
+  public function edit(int $id, Blog $blog): bool; // Modificar assinatura
+  public function findById(int $id): ?Blog; // Modificar retorno
   public function findAll(): array;
 }

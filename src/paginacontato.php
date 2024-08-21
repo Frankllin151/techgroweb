@@ -36,7 +36,15 @@
           </div>
         </div>
         <div class="content-ctn">
-          <form class="form-contato" action="" method="post">
+
+          <form class="form-contato" action="/action/action-contato.php" method="post">
+            <?php if (isset($_GET["mensagem"])): ?>
+            <?php if ($_GET["mensagem"] === 'sucesso'): ?>
+            <h6 class="mensagemsucesso">Mensagem enviada com sucesso</h6>
+            <?php elseif ($_GET["mensagem"] === 'error'): ?>
+            <h6 class="mensagemerror">Mensagem não enviada</h6>
+            <?php endif; ?>
+            <?php endif; ?>
             <input type="text" placeholder="Nome" name="nome" id="nome">
             <input type="email" placeholder="Email" name="email" id="email">
             <input type="tel" placeholder="Telefone" name="telefone" id="telefone">

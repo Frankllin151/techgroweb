@@ -1,20 +1,20 @@
  <!--Header-->
  <header class="header-main">
-   <div><img width="100" height="100" src="/assets/icon/logo.svg" alt=""></div>
+   <div><a href="http://localhost:8080/"><img width="100" height="100" src="/assets/icon/logo.svg" alt=""></a></div>
    <div class="navagation">
      <nav>
        <ul class="list-nav">
          <li class="dropdown">Serviços
            <i class="bi bi-chevron-down"></i>
            <ul class="dropdown-content">
-             <li><a href="#">Web Design</a></li>
-             <li><a href="#">Desenvolvimentos Sites</a></li>
-             <li><a href="#">Desenvolvimentos ERPS</a></li>
-             <li><a href="#">Desenvolvimentos Lojas</a></li>
-             <li><a href="#">SEO</a></li>
+             <li><a href="servico.php?typeservice=web_design">Web Design</a></li>
+             <li><a href="servico.php?typeservice=desenvolvimento_sites">Desenvolvimento de Sites</a></li>
+             <li><a href="servico.php?typeservice=desenvolvimento_erps">Desenvolvimento de ERPS</a></li>
+             <li><a href="servico.php?typeservice=desenvolvimento_lojas">Desenvolvimento de Lojas</a></li>
+             <li><a href="servico.php?typeservice=seo">SEO</a></li>
            </ul>
          </li>
-         <li><a href="blog.php">Blog</a></li>
+         <li><a href="#blog">Blog</a></li>
          <li><a href="#portfolio">Portfólio</a></li>
          <li><a href="#empresa">Empresa</a></li>
        </ul>
@@ -32,14 +32,14 @@
          <li class="dropdown">Serviços
            <i class="bi bi-chevron-down"></i>
            <ul class="dropdown-content">
-             <li><a href="#">Web Design</a></li>
-             <li><a href="#">Desenvolvimentos Sites</a></li>
-             <li><a href="#">Desenvolvimentos ERPS</a></li>
-             <li><a href="#">Desenvolvimentos Lojas</a></li>
-             <li><a href="#">SEO</a></li>
+             <li><a href="servico.php?typeservice=web_design">Web Design</a></li>
+             <li><a href="servico.php?typeservice=desenvolvimento_sites">Desenvolvimento de Sites</a></li>
+             <li><a href="servico.php?typeservice=desenvolvimento_erps">Desenvolvimento de ERPS</a></li>
+             <li><a href="servico.php?typeservice=desenvolvimento_lojas">Desenvolvimento de Lojas</a></li>
+             <li><a href="servico.php?typeservice=seo">SEO</a></li>
            </ul>
          </li>
-         <li><a href="blog.php">Blog</a></li>
+         <li><a href="#blog">Blog</a></li>
          <li><a href="#portfolio">Portfólio</a></li>
          <li><a href="#empresa">Empresa</a></li>
        </ul>

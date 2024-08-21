@@ -78,8 +78,21 @@ border-radius: 4px;
   margin-top: 5px;
   padding: 10px 20px;
   color: #eee;
+  cursor: pointer;
   font-size: 16px;
   background-color: var(--blue-light);
+}
+
+.mensagemsucesso, .mensagemerror{
+  padding: 10px;
+  color: #fff;
+ 
+}
+.mensagemerror{
+  background: red;
+}
+.mensagemsucesso {
+  background: var(--green);
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {

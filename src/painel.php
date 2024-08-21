@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php
-    
+   
 
     require "./CONFIG.php"; 
     if(!isset($_SESSION['user_id'])){
@@ -43,14 +43,19 @@
 
       <h2>Bem-vindo ao Painel</h2>
       <p>Aqui você pode gerenciar todas as funcionalidades da plataforma.</p>
+
       <?php
       if(isset($_GET["comp"])){
         $componente = $_GET['comp'];
         if($componente === "blog"){
+         
           require "./componentes/blog-painel.php";
         }
         if($componente === "crm"){
           require "./componentes/email-crm.php";
+        }
+        if($componente === "todosBlog"){
+          require "./componentes/blog-all.php";
         }
       }
       ?>
