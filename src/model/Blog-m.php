@@ -12,12 +12,25 @@ class Blog{
  }
  public function getTitle(): string
  {
-  return $this->title;
+  return html_entity_decode($this->title, ENT_QUOTES | ENT_HTML5, 'UTF-8');
  }
 
  public function getConteudo(): string
  {
-  return $this->conteudo;
+  return html_entity_decode($this->conteudo, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+ }
+ public function getEditarConteudo()
+ {
+   // Reverter </p><p> para "/"
+   $conteudoRevertido = str_replace('</p><p>', '/', $this->conteudo);
+        
+   // Reverter <span>texto</span> para (**texto**)
+   $conteudoRevertido = preg_replace('/<span>(.*?)<\/span>/', '(**$1**)', $conteudoRevertido);
+   
+   // Remover tags <p> ao redor do conteúdo, se necessário
+   $conteudoRevertido = preg_replace('/^<p>|<\/p>$/', '', $conteudoRevertido);
+
+   return $conteudoRevertido;
  }
  public function getDatime(): string 
  {

@@ -57,6 +57,9 @@
         if($componente === "todosBlog"){
           require "./componentes/blog-all.php";
         }
+        if($componente === "edita-blog"){
+          require "./componentes/editar-blog.php";
+        }
       }
       ?>
 

@@ -47,6 +47,13 @@ table td {
   color: red;
 }
 </style>
+<?php if (isset($_GET["mensagem"])): ?>
+<?php if ($_GET["mensagem"] === 'deletado'): ?>
+<h6 class="mensagemsucesso-blog">Deletado com sucesso</h6>
+<?php elseif ($_GET["mensagem"] === 'erro'): ?>
+<h6 class="mensagemerror-blog">Não Deletado</h6>
+<?php endif; ?>
+<?php endif; ?>
 <table>
   <thead>
     <tr>
@@ -64,8 +71,10 @@ table td {
       <td><?php echo date('d/m/Y H:i', strtotime($blog->getDatime())); ?></td>
       <td>
         <div class="action-icons">
-          <a href=""> <i class="bi bi-pencil-square edit-icon"></i></a>
-          <a href=""> <i class="bi bi-x-circle delete-icon"></i></a>
+          <a href="painel.php?comp=edita-blog&id=<?= $blog->getId(); ?>"> <i
+              class="bi bi-pencil-square edit-icon"></i></a>
+          <a href="/action/action-delete-blog.php?id=<?= $blog->getId(); ?>"> <i
+              class="bi bi-x-circle delete-icon"></i></a>
         </div>
       </td>
     </tr>

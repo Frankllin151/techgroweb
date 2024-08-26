@@ -1,3 +1,44 @@
+<?php
+require __DIR__."/CONFIG.php";
+require __DIR__."/daomysql/daoBlog.php";
+
+if(!$_GET["id"]){
+echo "id não existem";
+}
+$id = $_GET["id"];
+$blog = new Blogmysql($pdo);
+
+$PostUnico = $blog->findById($id);
+
+
+// Supondo que $PostUnico->getDatime() retorna uma string de data no formato 'Y-m-d H:i:s'
+$data = new DateTime($PostUnico->getDatime());
+
+// Definir um array com os nomes dos meses em português
+$meses = [
+    1 => 'Janeiro',
+    2 => 'Fevereiro',
+    3 => 'Março',
+    4 => 'Abril',
+    5 => 'Maio',
+    6 => 'Junho',
+    7 => 'Julho',
+    8 => 'Agosto',
+    9 => 'Setembro',
+    10 => 'Outubro',
+    11 => 'Novembro',
+    12 => 'Dezembro'
+];
+
+// Obter o dia, mês e ano
+$dia = $data->format('d');
+$mes = $data->format('n'); // 'n' para obter o número do mês sem zero à esquerda
+$ano = $data->format('Y');
+
+// Formatar a data
+$dataFormatada = "{$dia} de {$meses[$mes]} de {$ano}";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,28 +58,18 @@
   <section class="blog-content">
     <div class="post">
       <h1 class="post-title">
-        Desvendando a Web: Como a Programação Pode Transformar Seu Negócio
+        <?= $PostUnico->getTitle(); ?>
       </h1>
-      <p class="post-date">Publicado em 17 de Agosto de 2024</p>
+      <p class="post-date">
+        Publicado em:
+        <?= $dataFormatada;
+        ?>
+      </p>
       <div class="post-image-author">
 
       </div>
       <div class="post-text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-          Cras venenatis euismod malesuada. Nullam ac sapien vitae purus vestibulum vestibulum. Praesent non
-          tristique dui. Fusce pharetra justo eu nisl dapibus, in cursus dolor bibendum.
-        </p>
-        <p>
-          Sed cursus, nisl et semper scelerisque, orci lacus vulputate libero, at volutpat orci turpis sed urna.
-          Integer egestas, nisi a convallis facilisis, nulla sapien cursus justo, a consectetur purus ligula sit
-          amet enim.
-        </p>
-        <p>
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur sit
-          amet nisi at dolor aliquam bibendum. Cras varius, metus nec tristique gravida, nulla magna congue nisi,
-          vel gravida mauris justo id sapien.
-        </p>
+        <?= $PostUnico->getConteudo(); ?>
       </div>
 
     </div>

@@ -1,5 +1,5 @@
 <div class="blog-panel">
-  <a class="todosblog" href="painel.php?comp=todosBlog">Ver todos blog</a>
+  <a class="todosblog" href="painel.php?comp=todosBlog">Ver todos blog</a> <br>
   <?php if (isset($_GET["mensagem"])): ?>
   <?php if ($_GET["mensagem"] === 'sucesso'): ?>
   <h6 class="mensagemsucesso-blog">Publicação enviada com sucesso</h6>

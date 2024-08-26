@@ -26,13 +26,17 @@ class Blogmysql implements DaoBlog {
   }
 
   public function edit(int $id, Blog $blog): bool {
-      $sql = "UPDATE blog SET title = :title, conteudo = :conteudo, datetime = :datetime WHERE id = :id";
+   $sql = "UPDATE blog SET titulo = :titulo, conteudo = :conteudo, datetime = :datetime WHERE id = :id";
       $stmt = $this->pdo->prepare($sql);
-      $stmt->bindValue(':title', $blog->getTitle());
+      $stmt = $this->pdo->prepare($sql);
+      $stmt->bindValue(':titulo', $blog->getTitle());
       $stmt->bindValue(':conteudo', $blog->getConteudo());
       $stmt->bindValue(':datetime', $blog->getDatime());
       $stmt->bindValue(':id', $id);
       return $stmt->execute();
+      
+   
+
   }
 
   public function findById(int $id): ?Blog {
@@ -44,9 +48,10 @@ class Blogmysql implements DaoBlog {
       
       if ($result) {
           $blog = new Blog();
-          $blog->setTitle($result['title']);
+          $blog->setTitle($result['titulo']);
           $blog->setConteudo($result['conteudo']);
           $blog->setDatetime($result['datetime']);
+          $blog->setId($result["id"]);
           return $blog;
       }
       return null;

@@ -1,5 +1,10 @@
  <!---Blog -->
+ <?php 
+ require __DIR__."/../daomysql/daoBlog.php";
+ $blog  = new Blogmysql($pdo);
 
+ $posts = $blog->findAll();
+ ?>
  <section id="blog">
 
    <div class="container-blog">
@@ -8,71 +13,23 @@
      </div>
      <div class="carousel">
        <div class="carousel-inner">
-         <div class="carousel-item active">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Desvendando a Web: Como a Programação Pode Transformar Seu Negócio</h4>
+         <?php
+    $isFirst = true; // Variável para marcar o primeiro item como "active"
+    foreach ($posts as $post) {
+        $title = $post->getTitle(); // Método para obter o título do post
+        $id = $post->getId(); // Método para obter o ID do post
+        $activeClass = $isFirst ? 'active' : ''; // Adiciona a classe "active" apenas ao primeiro item
+        ?>
+         <div class="carousel-item <?php echo $activeClass; ?>">
+           <a href="blog.php?id=<?php echo $id; ?>" class="card-blog">
+             <h4 class="title-blog"><?php echo htmlspecialchars($title); ?></h4>
              <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
            </a>
          </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">O Guia Definitivo para Entender Web Development e Como Ele Pode Beneficiar Você
-             </h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Como Programação e Design Web Podem Impulsionar Seus Resultados: Um Guia para
-               Iniciantes</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Por Dentro da Web: O Que Você Precisa Saber Sobre Desenvolvimento e Design</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Entendendo PHP, Laravel e WordPress: O Que Seu Negócio Precisa Saber</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">A Magia da Programação: Transformando Ideias em Sites e Aplicações de Sucesso</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Primeiros Passos no Mundo do Desenvolvimento Web: O Que Cada Empreendedor Deve
-               Saber</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Do Zero ao Digital: Como a Programação Pode Ajudar Seu Negócio a Crescer</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Desenvolvimento Web para Leigos: O Que São PHP, Laravel e WordPress e Como Eles
-               Podem Ajudar Você</h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
-         <div class="carousel-item">
-           <a href="" class="card-blog">
-             <h4 class="title-blog">Como a Programação Pode Aumentar a Visibilidade e a Eficácia do Seu Negócio Online
-             </h4>
-             <span class="click-span-blog">Ler blog <i class="bi bi-box-arrow-right"></i></span>
-           </a>
-         </div>
+         <?php
+        $isFirst = false; // Após o primeiro item, definir como false para que os próximos itens não sejam "active"
+    }
+    ?>
        </div>
        <button class="carousel-control-prev"><i class="bi bi-arrow-left"></i></button>
        <button class="carousel-control-next"><i class="bi bi-arrow-right"></i></button>

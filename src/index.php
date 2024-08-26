@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require "./CONFIG.php"; ?>
 <html lang="pt-br">
 <link rel="stylesheet" href="./assets/css/header.css">
 <link rel="stylesheet" href="./assets/css/base.css">
